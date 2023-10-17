@@ -17,6 +17,7 @@
   <div>
     <ButtonSelf
         :text="text"
+        v-model="clickTime"
         @selfClick="handleClick">
       <!--默认插槽也需要名字,名字就交default-->
       <template #default>
@@ -26,12 +27,14 @@
         <div>使用第一个具名插槽-first</div>
       </template>
     </ButtonSelf>
+    <div>点击次数:<span style="color: red;font-weight: bold;font-size: 20px">{{clickTime}}</span></div>
   </div>
 </template>
 <script setup lang="ts">
 import ButtonSelf from "./components/Button/index.vue"
 import {ref} from "vue";
 const text = ref<string>('我是来自父组件的值')
+const clickTime = ref<number>(0);//点击次数
 const handleClick = () => {
   console.log('触发了父组件的回调,handleClick')
 }
