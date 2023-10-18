@@ -28,6 +28,9 @@
       </template>
     </ButtonSelf>
     <div>点击次数:<span style="color: red;font-weight: bold;font-size: 20px">{{clickTime}}</span></div>
+    <div class="button_div">
+      <span>来自父组件-cssScoped测试</span>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

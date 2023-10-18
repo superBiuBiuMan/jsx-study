@@ -39,7 +39,9 @@ export default defineComponent<Props,Emits,{},Slots>((props,ctx) => {
             点击我
           </button>
         </div>
-
+          <div class="button_div">
+            <span>子组件-cssScoped测试</span>
+          </div>
       </div>
   )
 },{
@@ -52,5 +54,7 @@ export default defineComponent<Props,Emits,{},Slots>((props,ctx) => {
 </script>
 
 <style scoped>
-
+.button_div{
+  background-color: #535bf2;
+}
 </style>
