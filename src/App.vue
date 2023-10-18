@@ -26,6 +26,9 @@
       <template #first>
         <div>使用第一个具名插槽-first</div>
       </template>
+      <template #second="{name,age,sex}">
+        <div>使用第二个插槽接收值-{{name}} {{age}} {{sex}}</div>
+      </template>
     </ButtonSelf>
     <div>点击次数:<span style="color: red;font-weight: bold;font-size: 20px">{{clickTime}}</span></div>
     <div class="button_div">
